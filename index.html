@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Get Local Time</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Chaohe Shi">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div class="center-wrapper-t">
+  <div class="center-wrapper-tc">
+    <div class="container">
+      <div class="row">
+        <div class="col-5 col-s-12">
+          <div id="map"></div>
+        </div>
+        <div class="col-7 col-s-12">
+          <div id="time">
+            <form action="javascript:;" onsubmit="getGeoFromInput()">
+              <input type="text" name="location" id="location" placeholder="e.g. Montreal, QC" required>
+              <button type="submit" value="Submit" title="Get local time">Get time</button>
+              <button type="button" onclick="getGeoFromClient()" title="Use my location"><svg width="14" height="14" viewBox="0 0 18 18"><path d="M 18 0 L 0 7.53 v 0.98 l 6.84 2.65 L 9.48 18 h 0.98 Z" stroke="white" stroke-width="2.4" fill="transparent"></path></svg></button>
+            </form>
+            <p class="key">Location:&nbsp;<span class="value" id="requested-location"></span></p>
+            <p class="key">Local time:&nbsp;<span class="value" id="local-time"></span></p>
+            <p class="key">UTC timestamp:&nbsp;<span class="value" id="utc-timestamp"></span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBIwzALxUPNbatRBj3Xi1Uhp0fFzwWNBkE"></script>
+<script src="javascript.js"></script>
+</body>
+</html>
